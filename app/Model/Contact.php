@@ -12,5 +12,21 @@
  * @author Bruce
  */
 class Contact extends AppModel {
-    //put your code here
+    public $belongsTo = 'Category';
+	
+	public $validate = array(
+	'category_id' => 'numeric',
+	'name' => 'notEmpty',
+	'title' => 'alphaNumerica',
+	'organization' => 'alphaNumerica',
+	'street_address_1' => 'alphaNumerica',
+	'street_address_2' => 'alphaNumerica',
+	'zip' => 'postal',
+	'email' => 'email',
+	'home_phone' => 'phone',
+	'work_phone' => 'phone',
+	'phone_other' => 'phone',
+	'fax' => 'phone',
+	'website' => 'url'
+	);
 }

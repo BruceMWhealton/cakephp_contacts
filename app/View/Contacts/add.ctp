@@ -3,6 +3,7 @@
 <h1>Add Contact</h1>
 <?php
 echo $this->Form->create('Contact');
+echo $this->Form->input('category_id');
 echo $this->Form->input('name');
 echo $this->Form->input('title');
 echo $this->Form->input('organization');

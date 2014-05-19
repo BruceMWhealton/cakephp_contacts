@@ -2,6 +2,8 @@
 
 
 <h2><?php echo $contact['Contact']['name']; ?> (<?php echo $contact['Contact']['organization']; ?>)</h2>
+<h3>Relationship/Contact Category</h3>
+<p><?php echo $contact['Category']['category_name']; ?></p>
 <?php if($contact['Contact']['title']) : ?>
 <p>Title: <?php echo $contact['Contact']['title']; ?></p>
 <?php endif; ?>

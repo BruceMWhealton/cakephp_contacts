@@ -87,7 +87,7 @@ class ContactsController extends AppController{
                 $this->Session->setFlash(__('The contact was not updated.'));
             }
         }
-		
+		$this->set('categories', $this->Contact->Category->find('list', array('order' => 'category_name')));
         $this->request->data = $data;
 	}
 	
@@ -108,6 +108,7 @@ class ContactsController extends AppController{
 				// if the data fails to do something	
 			}
 		}
+		$this->set('categories', $this->Contact->Category->find('list', array('order' => 'category_name')));
 	}
     
     public function view($id = null)
