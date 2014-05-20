@@ -94,6 +94,7 @@ class ContactsController extends AppController{
 	
 	public function add()
 	{
+		$this->set('title_for_layout', 'Add a Contact');
 		if($this->request->is('post'))
 		{
 			// prepare the model to insert a new item in the database.
@@ -113,6 +114,7 @@ class ContactsController extends AppController{
     
     public function view($id = null)
     {
+    	$this->layout = '_default';
         if(!$id)
         {
             throw new NotFoundException(__("ID was not set, no contact to display."));
