@@ -12,5 +12,5 @@ class Note extends AppModel {
  * @var string
  */
 	public $displayField = 'note';
-
+	public $belongsTo = 'Contact';
 }

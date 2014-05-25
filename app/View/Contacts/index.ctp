@@ -5,6 +5,7 @@
     <tr>
         <th>Name</th>
         <th>Organization</th>
+        <th>Category</th>
         <th>Actions</th>
      </tr>
      <?php foreach ($contacts as $contact): ?>
@@ -16,6 +17,7 @@
          <td>
              <?php echo h($contact['Contact']['organization']); ?>
          </td>
+         
          <td>
              <?php echo $this->Html->link('Edit',
                      array('action' => 'edit', $contact['Contact']['id'])); ?> | 

@@ -13,6 +13,7 @@
  */
 class Contact extends AppModel {
     public $belongsTo = 'Category';
+	public $hasMany = 'Note';
 	
 	public $validate = array(
 	'category_id' => 'numeric',

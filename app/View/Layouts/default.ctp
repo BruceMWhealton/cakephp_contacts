@@ -18,6 +18,12 @@
 	            <ul>
 	                <li><a href="/contacts">Contacts</a></li>
 	                <li><a href="/categories">Categories</a></li>
+	                <li><a href="/users">Users</a></li>
+	                <?php if(AuthComponent::user()) : ?>
+	                	<li><a href="/users/logout">Log Out</a></li>
+	                <?php else : ?>
+	                	<li><a href="/users/login">Log In</a></li>
+	                <?php endif; ?>
 	            </ul>
 	        </div>
 			<div id="Search" class="widthWrapper">

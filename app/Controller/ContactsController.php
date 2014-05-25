@@ -114,7 +114,7 @@ class ContactsController extends AppController{
     
     public function view($id = null)
     {
-    	$this->layout = '_default';
+    	$this->layout = 'default';
         if(!$id)
         {
             throw new NotFoundException(__("ID was not set, no contact to display."));
